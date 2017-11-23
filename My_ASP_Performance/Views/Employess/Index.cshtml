@@ -1,0 +1,33 @@
+﻿@using DataAcces.Model
+@model List<Person>
+
+@{ 
+    ViewBag.Title = "Index";
+}
+
+<a href="@Url.Action("Create", "Employess")" class="btw btn-primary btn-lg">Vytvoreni noveho zamestnance</a>
+<div class="clearfix"></div>
+<h1>Seznam zamestnancu</h1>
+<table class="table table-responsive">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birth</th>
+            <th>Registred</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Person p in Model)
+        {  
+            <tr>
+                <td>@p.Id</td>
+                <td>@Html.ActionLink(p.FirstName+" "+p.LastName, "Detail", "Employess", new { id = p.Id}, new { titule = p.FirstName})</td>
+                <td>@p.Email</td>
+                <td>@p.Birth</td>
+                <td>@p.Registred</td>
+            </tr>
+        }
+    </tbody>
+</table>

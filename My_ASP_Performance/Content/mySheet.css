@@ -1,0 +1,12 @@
+﻿input.input-validation-error{
+    background-color: sandybrown
+}
+
+input.valid{
+    background-color: aquamarine
+}
+
+.active {
+    background-color: #d90000;
+    color: #fff;
+}

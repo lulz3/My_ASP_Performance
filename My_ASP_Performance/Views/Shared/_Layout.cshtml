@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>My ASP.NET performance</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="@Url.Content("~/Content/mySheet.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/bootstrap-theme.css")" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills float-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("index", "Employess")">Employess</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Go_Hard_Go_PRO</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h1 class="display-3">My ASP performance</h1>
+            <p class="lead">Vítejte na mojí stránce. Tato stránka slouží k testovacím a studijním účelům!</p>
+            <p><a class="btn btn-lg btn-success" href="#" role="button">Registrace</a></p>
+        </div>
+
+        <div class="row marketing">
+            @RenderBody()
+        </div>
+
+        <footer class="footer">
+            <p>&copy; MyCompany 2017</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery-1.9.1.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+</body>
+</html>
