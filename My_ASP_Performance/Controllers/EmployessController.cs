@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Web.Mvc;
 using System.Linq;
 using System.Data.SqlTypes;
+using System.Data.SqlClient;
 
 namespace My_ASP_Performance.Controllers
 {
@@ -12,12 +13,12 @@ namespace My_ASP_Performance.Controllers
         // GET: Employess
         public ActionResult Index()
         {
-            return View(Persons.GetEmpFromDTB);
+            return View(Commands.GetEmpFromDTB);
         }
 
         public ActionResult Detail(int id)
         {
-            Person per = (from Person person in Persons.GetEmpFromDTB where person.Id == id select person).FirstOrDefault();
+            Person per = (from Person person in Commands.GetEmpFromDTB where person.Id == id select person).FirstOrDefault();
             return View(per);
         }
 
@@ -31,12 +32,8 @@ namespace My_ASP_Performance.Controllers
         {
             if (ModelState.IsValid)
             {
-                DateTime myDateTime = DateTime.Now;
-                var sqlFormattedDate = myDateTime.Date.ToString("yyyy-MM-dd HH:mm:ss");
-                //p.Id = Persons.Counter;
-                SqlDateTime a = new SqlDateTime(DateTime.Now);
-                p.Registred = a;
-                Persons.AddEmpToDTB().Add(p);
+                p.Registred = DateTime.Now;
+                Commands.AddEmpToDTB(p);
             }
             else
             {

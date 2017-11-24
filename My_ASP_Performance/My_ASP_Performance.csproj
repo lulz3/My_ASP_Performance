@@ -92,9 +92,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\EmpDB.mdf" />
-    <Content Include="App_Data\EmpDB_log.ldf">
-      <DependentUpon>EmpDB.mdf</DependentUpon>
+    <Content Include="App_Data\employeesDTB.mdf" />
+    <Content Include="App_Data\employeesDTB_log.ldf">
+      <DependentUpon>employeesDTB.mdf</DependentUpon>
     </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />

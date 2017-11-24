@@ -19,6 +19,6 @@ namespace DataAcces.Model
         [Required(ErrorMessage = "Vyplnte datum narozeni!")]
         [Range(1925,2005, ErrorMessage = "Zamestnanec je moc mlady, nebo je uz mrtvy!")]
         public int Birth { get; set; }
-        public SqlDateTime Registred { get; set; }
+        public DateTime Registred { get; set; }
     }
 }
